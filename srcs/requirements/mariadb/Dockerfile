@@ -1,6 +1,4 @@
-# -------------------------------------------------------------------
-# MariaDB container — built from Debian (penultimate stable)
-# -------------------------------------------------------------------
+# MariaDB container
 FROM debian:bullseye
 
 # Update and install MariaDB
