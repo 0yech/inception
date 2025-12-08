@@ -19,7 +19,7 @@ echo "Substituting environment variables in nginx configuration..."
 envsubst '$DOMAIN_NAME' < "$CONF_FILE" > /tmp/default.conf
 mv /tmp/default.conf "$CONF_FILE"
 
-# Generate self-signed certificate if not existing
+# gen self-signed certificate if not existing
 if [ ! -f "$SSL_DIR/${DOMAIN_NAME}.crt" ]; then
     echo "Generating SSL certificate for ${DOMAIN_NAME}..."
     openssl req -x509 -nodes -days 365 \

@@ -45,6 +45,31 @@ services:
     networks:
       - inception
 
+  ftp:
+    build: ./requirements/ftp
+    container_name: ftp
+    env_file: .env
+    ports:
+      - "21:21"
+      - "21000-21010:21000-21010"
+    volumes:
+      - wordpress_files:/var/www/wordpress
+    networks:
+      - inception
+    restart: unless-stopped
+
+  cron:
+    build: ./requirements/cron
+    container_name: cron
+    env_file: .env
+    depends_on:
+      - mariadb
+    volumes:
+      - ~/data/backup:/backup
+    networks:
+      - inception
+    restart: unless-stopped
+
   nginx:
     build: ./requirements/nginx
     container_name: nginx
