@@ -28,6 +28,16 @@ Using the Makefile at the root of the project.
 
 ```make clean```
 
+### Manage credentials
+
+Setup an `.env` file in /srcs/ (Check README.md)
+
+### Docker status
+
+```
+docker ps
+```
+
 ### Wordpress
 ```
 https://42login.42.fr
