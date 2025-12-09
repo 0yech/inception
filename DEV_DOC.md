@@ -31,3 +31,5 @@ make re
 In `inception/srcs/requirements` you will find every service containers. they have folders named `conf` for config and `tools` for entrypoint scripts.
 
 You can use `docker exec -it [CONTAINER_NAME]` to enter the containers interactively.
+
+Volumes and networks can be edited in `inception/srcs/docker-compose.yml`
